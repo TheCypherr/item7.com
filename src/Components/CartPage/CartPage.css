@@ -280,16 +280,17 @@ button.btn10:hover {
     font-weight: lighter;
   }
   .counter {
-    margin-right: 10px;
+    margin-right: 0px;
     height: 10px;
   }
   .counter-btn {
     width: 10px;
     height: 10px;
+    border-radius: 50%;
     font-size: 17px;
   }
   .count-display {
-    width: 20px;
+    width: 15px;
   }
   button.remove-item {
     width: 20px;
