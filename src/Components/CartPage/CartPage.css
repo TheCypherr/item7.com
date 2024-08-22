@@ -280,17 +280,16 @@ button.btn10:hover {
     font-weight: lighter;
   }
   .counter {
-    margin-right: 0px;
-    width: 50px;
-    height: 7px;
+    margin-right: 10px;
+    height: 10px;
   }
   .counter-btn {
     width: 10px;
-    height: 5px;
+    height: 10px;
     font-size: 17px;
   }
   .count-display {
-    padding: 5px;
+    width: 20px;
   }
   button.remove-item {
     width: 20px;
@@ -345,12 +344,16 @@ button.btn10:hover {
     margin-right: 15px;
   }
   .counter {
-    margin-right: 5px;
+    margin-right: 10px;
+    height: 10px;
   }
   .counter-btn {
     width: 10px;
-    height: 5px;
+    height: 10px;
     font-size: 17px;
+  }
+  .count-display {
+    width: 20px;
   }
   .small h3 {
     margin-top: 10px;
@@ -398,17 +401,16 @@ button.btn10:hover {
     font-weight: lighter;
   }
   .counter {
-    margin-right: 0px;
-    width: 50px;
-    height: 7px;
+    margin-right: 10px;
+    height: 10px;
   }
   .counter-btn {
     width: 10px;
-    height: 5px;
+    height: 10px;
     font-size: 17px;
   }
   .count-display {
-    padding: 5px;
+    width: 20px;
   }
   button.remove-item {
     width: 20px;
