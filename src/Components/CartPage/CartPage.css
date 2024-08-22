@@ -285,8 +285,8 @@ button.btn10:hover {
     height: 7px;
   }
   .counter .counter-btn {
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    height: 5px;
     font-size: 17px;
   }
   .count-display {
@@ -347,6 +347,11 @@ button.btn10:hover {
   .counter {
     margin-right: 5px;
   }
+  .counter .counter-btn {
+    width: 5px;
+    height: 5px;
+    font-size: 17px;
+  }
   .small h3 {
     margin-top: 10px;
   }
@@ -394,9 +399,9 @@ button.btn10:hover {
     width: 60px;
     height: 7px;
   }
-  .counter.counter-btn {
-    width: 15px;
-    height: 15px;
+  .counter .counter-btn {
+    width: 5px;
+    height: 5px;
     font-size: 17px;
   }
   .count-display {
