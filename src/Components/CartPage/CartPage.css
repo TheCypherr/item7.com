@@ -281,16 +281,12 @@ button.btn10:hover {
   }
   .counter {
     margin-right: 0px;
-    width: 60px;
+    width: 50px;
     height: 7px;
   }
-  .counter button {
-    width: 5px;
-    height: 5px;
-  }
-  button.counter-btn {
+  .counter-btn {
     width: 10px;
-    height: 10x;
+    height: 5px;
     font-size: 17px;
   }
   .count-display {
@@ -351,13 +347,9 @@ button.btn10:hover {
   .counter {
     margin-right: 5px;
   }
-  .counter button {
-    width: 5px;
-    height: 5px;
-  }
-  button.counter-btn {
+  .counter-btn {
     width: 10px;
-    height: 10x;
+    height: 5px;
     font-size: 17px;
   }
   .small h3 {
@@ -371,6 +363,9 @@ button.btn10:hover {
   }
   .item p {
     font-size: 15px;
+  }
+  .shipping select {
+    color: #222831;
   }
 }
 
@@ -404,16 +399,12 @@ button.btn10:hover {
   }
   .counter {
     margin-right: 0px;
-    width: 60px;
+    width: 50px;
     height: 7px;
   }
-  .counter button {
-    width: 5px;
-    height: 5px;
-  }
-  button.counter-btn {
+  .counter-btn {
     width: 10px;
-    height: 10x;
+    height: 5px;
     font-size: 17px;
   }
   .count-display {
@@ -453,6 +444,7 @@ button.btn10:hover {
   }
   .shipping select {
     margin-bottom: 5px;
+    color: #222831;
   }
   .underline0 {
     margin-top: 10px;
