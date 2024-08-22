@@ -97,7 +97,7 @@ const CartPage = () => {
         </div>
 
         <div className="shipping">
-          <h3>SHIPPING</h3>
+          <h3>DELIVERY</h3>
           <select name="shipping" onChange={handleShippingChange}>
             <option value="Standard-Delivery-N15">
               Standard-Delivery-N1,000
