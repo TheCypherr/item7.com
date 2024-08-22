@@ -95,7 +95,7 @@ body {
 }
 
 .counter-btn {
-  background-color: #032f5f;
+  background-color: #222831;
   color: white;
   border: none;
   border-radius: 50%;
@@ -106,10 +106,6 @@ body {
   justify-content: center;
   font-size: 18px;
   cursor: pointer;
-}
-
-.counter-btn:hover {
-  background-color: #053f7d;
 }
 
 .count-display {
@@ -287,7 +283,7 @@ button.btn10:hover {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    font-size: 17px;
+    font-size: 18px;
   }
   .count-display {
     width: 15px;
