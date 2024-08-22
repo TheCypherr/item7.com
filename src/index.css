@@ -1,0 +1,74 @@
+/* src/ */
+/* ├── components/
+  │   ├── Navbar.jsx
+  │   ├── Footer.jsx
+  │   ├── Menu.jsx
+  │   └── ContactForm.jsx
+  ├── pages/
+  │   ├── Home.jsx
+  │   ├── About.jsx
+  │   ├── Menu.jsx
+  │   └── Contact.jsx
+  ├── App.jsx
+  └── index.jsx */
+
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+* {
+  font-family: "Lilita One", sans-serif;
+}
+body {
+  font-family: "Lilita One", sans-serif;
+  color: #0c0c0c;
+  background-color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Style the container of the dots */
+.slick-dots {
+  bottom: 10px; /* Position the dots container */
+  top: 110%;
+  left: -45%; /* Position the dots container from the left */
+  right: auto; /* Remove default right alignment */
+  position: absolute; /* Ensure proper positioning */
+}
+
+/* Style the dots themselves */
+.slick-dots li button:before {
+  font-size: 15px; /* Size of the dot */
+  color: #fff; /* Color of the dot */
+  opacity: 50; /* Default opacity */
+}
+
+/* Style for the active dot */
+.slick-dots li.slick-active button:before {
+  color: #ff1c1c; /* Color of the active dot */
+  opacity: 1; /* Full opacity for active dot */
+  font-size: 25px;
+}
+
+/* Optional: Style for hover effect */
+.slick-dots li button:hover:before {
+  color: #fff; /* Change color on hover */
+}
+
+@media (max-width: 600px) {
+  .slick-dots {
+    padding: 0px 30px 0px 30px;
+    margin-top: 20px;
+  }
+}
+
+/* For Tablet Portrait */
+@media (min-width: 600px) and (max-width: 900px) {
+  .slick-dots {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 750px) and (max-width: 900px) {
+  .slick-dots {
+    padding-left: 20px;
+    margin-top: -15px;
+  }
+}
