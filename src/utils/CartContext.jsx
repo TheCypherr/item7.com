@@ -5,6 +5,24 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [cartItems, setCartItems] = useState({});
+  // useState for selected shipping cost
+  const [shippingCost, setShippingCost] = useState(1);
+
+  // Function to handle shipping option change
+  const handleShippingChange = (event) => {
+    const selectedOption = event.target.value;
+    let cost = 0;
+
+    if (selectedOption.includes("Standard")) {
+      cost = 1;
+    } else if (selectedOption.includes("Next day")) {
+      cost = 2;
+    } else if (selectedOption.includes("Express")) {
+      cost = 3;
+    }
+
+    setShippingCost(cost);
+  };
 
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
@@ -51,6 +69,15 @@ export const CartProvider = ({ children }) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
+  // Function to calculate foodTotal of all items
+  const foodTotal = Object.values(cartItems).reduce(
+    (total, item) => total + parseFloat(item.price) * item.count,
+    0
+  );
+
+  // Function to calculate grandTotal of all items
+  const finalTotal = foodTotal + shippingCost;
+
   return (
     <CartContext.Provider
       value={{
@@ -60,6 +87,9 @@ export const CartProvider = ({ children }) => {
         increaseCounter,
         decreaseCounter,
         deleteTask,
+        foodTotal,
+        handleShippingChange,
+        finalTotal,
       }}
     >
       {children}

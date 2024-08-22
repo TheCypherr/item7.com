@@ -43,7 +43,7 @@ const MainMenu = () => {
                 <p>{food.details}</p>
               </div>
               <div className="last-container">
-                <div className="price-text">{food.price}.00</div>
+                <div className="price-text">N{food.price},000</div>
                 <button
                   className={`cart-btn ${clicked[food.name] ? "clicked" : ""}`}
                   onClick={() => handleButtonClick(food)}

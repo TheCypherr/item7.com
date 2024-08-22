@@ -5,7 +5,7 @@ const foodList = [
     name: "Eba & Vegetable",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -14,7 +14,7 @@ const foodList = [
     name: "Jollof Rice & Turkey",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -23,7 +23,7 @@ const foodList = [
     name: "Beans & Bread",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -32,7 +32,7 @@ const foodList = [
     name: "Tuwo & Masa",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -41,7 +41,7 @@ const foodList = [
     name: "Gbegiri & Ewedu",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -50,7 +50,7 @@ const foodList = [
     name: "Yam & Egg",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -59,7 +59,7 @@ const foodList = [
     name: "Beans & Plantain",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -68,7 +68,7 @@ const foodList = [
     name: "Pap & Akara",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -77,7 +77,7 @@ const foodList = [
     name: "Yam & Fish Sauce",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -86,7 +86,7 @@ const foodList = [
     name: "Egg Sauce & Rice",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -95,7 +95,7 @@ const foodList = [
     name: "Native Rice",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
   {
@@ -104,7 +104,7 @@ const foodList = [
     name: "Ewa Agoyin",
     details:
       "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
-    price: 2000,
+    price: 2,
     count: 1, // Initial count for the item
   },
 ];

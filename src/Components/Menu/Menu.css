@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lilita One", sans-serif;
   padding: 0px;
   margin: 0;
   color: #000;
@@ -7,11 +7,12 @@ body {
 }
 .menu-wrapper {
   padding: 50px 110px 30px 110px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Lilita One", sans-serif;
 }
 .small-menu h1 {
   text-align: center;
   font-size: 3rem;
+  font-weight: lighter;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +23,7 @@ body {
 .btn > :nth-child(1) {
   background-color: #222831;
   color: #fff;
-  font-weight: 500;
+  font-weight: lighter;
 }
 .btn button {
   margin: 10px;
@@ -33,7 +34,7 @@ body {
   border: none;
   border-radius: 50px;
   background-color: #fff;
-  font-weight: 500;
+  font-weight: lighter;
   cursor: pointer;
 }
 .menu-container {
@@ -84,11 +85,13 @@ body {
   margin-top: 3px;
   padding-top: -5px;
   font-size: 20px;
+  font-weight: lighter;
 }
 .text-container p {
   margin-top: -5px;
   font-size: 15px;
   line-height: 23px;
+  font-weight: lighter;
 }
 .last-container {
   margin-top: -35px;
@@ -97,11 +100,13 @@ body {
   justify-content: space-between;
   font-weight: bold;
   font-size: 17px;
+  font-weight: lighter;
 }
 
 /* Menu Button to Add to Cart */
 .last-container button {
   margin-top: -10px;
+  padding-top: 2px;
   padding-bottom: 5px;
   width: 150px;
   height: 35px;
@@ -112,6 +117,7 @@ body {
   border: none;
   color: #fff;
   font-size: 15px;
+  font-weight: lighter;
   border-radius: 50px;
   cursor: pointer;
   transition: all 300ms ease-in;

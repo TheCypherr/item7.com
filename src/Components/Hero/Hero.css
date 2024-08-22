@@ -36,15 +36,17 @@ body {
 
 .text p {
   margin-bottom: -10px;
+  font-weight: lighter;
 }
 .text h2 {
   font-size: 4rem;
   padding: 0;
   margin: 0;
-  font-weight: normal;
+  font-weight: lighter;
 }
 .text span {
   font-size: 30px;
+  font-weight: lighter;
   font-style: italic;
   margin-top: -50px;
 }
@@ -97,12 +99,13 @@ button.hero-btn:hover {
   }
   .text p {
     margin-bottom: -5px;
+    font-weight: lighter;
   }
   .text h2 {
     font-size: 3.5rem;
     padding: 0;
     margin: 0;
-    font-weight: normal;
+    font-weight: lighter;
   }
   button.hero-btn:hover {
     background-color: #222831;
@@ -135,13 +138,14 @@ button.hero-btn:hover {
   .text p {
     margin-bottom: -5px;
     font-size: 1.5rem;
+    font-weight: lighter;
   }
   .text h2 {
     font-size: 6rem;
     padding: 0;
     padding-bottom: 5px;
     margin: 0;
-    font-weight: normal;
+    font-weight: lighter;
   }
   button.hero-btn:hover {
     background-color: #222831;
@@ -170,18 +174,20 @@ button.hero-btn:hover {
   .text p {
     margin-bottom: -5px;
     font-size: 15px;
+    font-weight: lighter;
   }
   .text h2 {
     font-size: 3rem;
     padding: 0;
     padding-bottom: 1px;
     margin: 0;
-    font-weight: normal;
+    font-weight: lighter;
   }
   .text span {
     font-size: 25px;
     font-style: italic;
     margin-top: -50px;
+    font-weight: lighter;
   }
   button.hero-btn:hover {
     background-color: #222831;

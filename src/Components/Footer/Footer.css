@@ -24,16 +24,16 @@ body {
 }
 .top-info1 h2 {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: lighter;
 }
 .top-info1 a {
   text-decoration: none;
   color: #fff;
-  font-weight: 400;
+  font-weight: lighter;
   cursor: pointer;
 }
 .top-info1 a:hover {
-  font-weight: 400;
+  font-weight: lighter;
   cursor: pointer;
   color: #ff1c1c;
 }
@@ -42,10 +42,10 @@ body {
 }
 .top-info h2 {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: lighter;
 }
 .top-info p {
-  font-weight: 400;
+  font-weight: lighter;
 }
 .media-icons {
   padding-top: 10px;
@@ -87,7 +87,7 @@ span .icon:hover {
   }
   .top-info1 h2 {
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: lighter;
     margin-bottom: -2px;
   }
   .top-info1 p {
@@ -100,7 +100,7 @@ span .icon:hover {
   }
   .top-info h2 {
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: lighter;
     margin-bottom: -2px;
   }
   .media-icons {
