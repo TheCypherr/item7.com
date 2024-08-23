@@ -20,11 +20,22 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-.btn > :nth-child(1) {
+/* .btn > :nth-child(1) {
+  background-color: #222831;
+  color: #fff;
+  font-weight: lighter;
+} */
+.btn .activeColor {
   background-color: #222831;
   color: #fff;
   font-weight: lighter;
 }
+.btn .inactiveColor {
+  background-color: #fff;
+  color: #222831;
+  font-weight: lighter;
+}
+
 .btn button {
   margin: 10px;
   width: 100px;

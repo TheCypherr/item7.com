@@ -1,4 +1,6 @@
 import React, { createContext, useState } from "react";
+import MenuPageData from "./MenuPageData";
+import FoodData from "./FoodData";
 
 export const CartContext = createContext();
 
@@ -7,6 +9,46 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   // useState for selected shipping cost
   const [shippingCost, setShippingCost] = useState(1);
+
+  // MenuPageData import for menuItems & setMenuItems
+  const { menuItems, setMenuItems } = MenuPageData();
+
+  // FoodData import for foodMenuItems & setFoodMenuItems
+  const { foodMenuItems, setFoodMenuItems } = FoodData();
+
+  // useState for menuShuffle
+  const [currentMenu, setCurrentMenu] = useState("all");
+
+  const shuffleMenu = (menu) => {
+    setMenuItems((prevMenuItems) => {
+      const shuffledMenu = [...prevMenuItems[menu]];
+      shuffledMenu.sort(() => Math.random() - 0.5);
+      return { ...prevMenuItems, [menu]: shuffledMenu };
+    });
+  };
+
+  // click function to shufle menu
+  const handleMenuClick = (menu) => {
+    setCurrentMenu(menu);
+    shuffleMenu(menu);
+  };
+
+  // useState for homeMenuShuffle
+  const [homeCurrentMenu, setHomeCurrentMenu] = useState("all");
+
+  const homeShuffleMenu = (menu) => {
+    setFoodMenuItems((prevFoodMenuItems) => {
+      const homeShuffledMenu = [...prevFoodMenuItems[menu]];
+      homeShuffledMenu.sort(() => Math.random() - 0.5);
+      return { ...prevFoodMenuItems, [menu]: homeShuffledMenu };
+    });
+  };
+
+  // click function to shuffle home menu
+  const handleHomeMenuClick = (menu) => {
+    setHomeCurrentMenu(menu);
+    homeShuffleMenu(menu);
+  };
 
   // Function to handle shipping option change
   const handleShippingChange = (event) => {
@@ -90,6 +132,12 @@ export const CartProvider = ({ children }) => {
         foodTotal,
         handleShippingChange,
         finalTotal,
+        menuItems,
+        currentMenu,
+        handleMenuClick,
+        foodMenuItems,
+        homeCurrentMenu,
+        handleHomeMenuClick,
       }}
     >
       {children}

@@ -2,13 +2,18 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../../utils/CartContext";
 import "./MainMenu.css";
 import { FaUser, FaShoppingCart, FaSearch } from "react-icons/fa";
-import foodList from "../../utils/MenuPageData";
 
 const MainMenu = () => {
-  const { cart, addToCart } = useContext(CartContext);
+  const { cart, addToCart, menuItems, currentMenu, handleMenuClick } =
+    useContext(CartContext);
 
+  // useState for specific food item
   const [clicked, setClicked] = useState({});
 
+  // useState for selected category
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  // onclick function to add item to cart
   const handleButtonClick = (food) => {
     addToCart(food);
 
@@ -19,21 +24,66 @@ const MainMenu = () => {
     }));
   };
 
+  // onclick function to change style for selected category
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <section className="menu-wrapper">
       <div className="small-menu">
         <h1>Our Menu</h1>
         <div className="btn">
-          <button>All</button>
-          <button>Rice</button>
-          <button>Swallow</button>
-          <button>Burger</button>
+          <button
+            className={
+              selectedCategory === "all" ? "activeColor" : "inactiveColor"
+            }
+            onClick={() => {
+              handleMenuClick("all");
+              handleCategoryClick("all");
+            }}
+          >
+            All
+          </button>
+          <button
+            className={
+              selectedCategory === "rice" ? "activeColor" : "inactiveColor"
+            }
+            onClick={() => {
+              handleMenuClick("rice");
+              handleCategoryClick("rice");
+            }}
+          >
+            Rice
+          </button>
+          <button
+            className={
+              selectedCategory === "swallow" ? "activeColor" : "inactiveColor"
+            }
+            onClick={() => {
+              handleMenuClick("swallow");
+              handleCategoryClick("swallow");
+            }}
+          >
+            Swallow
+          </button>
+          <button
+            className={
+              selectedCategory === "burger" ? "activeColor" : "inactiveColor"
+            }
+            onClick={() => {
+              handleMenuClick("burger");
+              handleCategoryClick("burger");
+            }}
+          >
+            Burger
+          </button>
         </div>
       </div>
 
       <CartContext.Provider value={{ cart, addToCart, clicked, setClicked }}>
         <div className="menu-container menupage">
-          {foodList.map((food, index) => (
+          {menuItems[currentMenu].map((food, index) => (
             <div key={index} className="main-container">
               <div className="food-container">
                 <img src={food.image} alt={food.name} />
