@@ -229,7 +229,7 @@ button.btn10:hover {
     height: 100vh;
     display: block;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .cart-side1 {
     width: 100%;
