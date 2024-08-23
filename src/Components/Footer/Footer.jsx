@@ -30,7 +30,7 @@ const Footer = () => {
 
           <a href="https://gmail.com">
             <p>
-              <FaEnvelope size={17} /> cypherdev@gmail.com
+              <FaEnvelope size={17} /> cypherdev6@gmail.com
             </p>
           </a>
         </div>
