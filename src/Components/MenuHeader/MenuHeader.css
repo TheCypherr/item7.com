@@ -42,8 +42,9 @@ body {
   padding-right: 25px;
   padding-left: 25px;
 }
-.h-three {
-  margin-top: -25px;
+.btn {
+  text-align: center;
+  margin-top: 20px;
 }
 .icon {
   fill: #fff;

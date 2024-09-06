@@ -54,7 +54,6 @@ const CartHeader = () => {
                 <Link to="/cart">
                   <FaShoppingCart size={17} color="#000" className="icon" />
                 </Link>
-                <FaSearch size={17} color="#000" className="icon" />
               </div>
               <div className="order">
                 <Link to="/cart" className="cart-link">
@@ -84,7 +83,6 @@ const CartHeader = () => {
           <Link to="/cart">
             <FaShoppingCart size={17} color="#000" className="icon" />
           </Link>
-          <FaSearch size={17} color="#000" className="icon" />
           <Link to="/cart" className="cart-link">
             <button className="btn">Cart Opened</button>
           </Link>

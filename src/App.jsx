@@ -14,69 +14,72 @@ import TableHeader from "./Components/TableHeader/TableHeader";
 import CartPage from "./Components/CartPage/CartPage";
 import { CartProvider } from "./utils/CartContext";
 import CartHeader from "./Components/CartHeader/CartHeader";
+import { SearchProvider } from "./utils/SearchContext";
 
 function App() {
   return (
     <>
-      <CartProvider>
-        <div>
-          <ScrollToTop />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Header />
-                  <Hero />
-                  <Menu />
-                  <WeAre />
-                  <Table />
-                </>
-              }
-            />
-            <Route
-              path="/menupage"
-              element={
-                <>
-                  <MenuHeader />
-                  <MainMenu />
-                  <Hero />
-                </>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <>
-                  <AboutHeader />
-                  <WeAre />
-                  <Hero />
-                </>
-              }
-            />
-            <Route
-              path="/book"
-              element={
-                <>
-                  <TableHeader />
-                  <Table />
-                  <Hero />
-                </>
-              }
-            />
-            <Route
-              path="/cart"
-              element={
-                <>
-                  <CartHeader />
-                  <CartPage />
-                </>
-              }
-            />
-          </Routes>
-          <Footer />
-        </div>
-      </CartProvider>
+      <SearchProvider>
+        <CartProvider>
+          <div>
+            <ScrollToTop />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Header />
+                    <Hero />
+                    <Menu />
+                    <WeAre />
+                    <Table />
+                  </>
+                }
+              />
+              <Route
+                path="/menupage"
+                element={
+                  <>
+                    <MenuHeader />
+                    <MainMenu />
+                    <Hero />
+                  </>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <>
+                    <AboutHeader />
+                    <WeAre />
+                    <Hero />
+                  </>
+                }
+              />
+              <Route
+                path="/book"
+                element={
+                  <>
+                    <TableHeader />
+                    <Table />
+                    <Hero />
+                  </>
+                }
+              />
+              <Route
+                path="/cart"
+                element={
+                  <>
+                    <CartHeader />
+                    <CartPage />
+                  </>
+                }
+              />
+            </Routes>
+            <Footer />
+          </div>
+        </CartProvider>
+      </SearchProvider>
     </>
   );
 }

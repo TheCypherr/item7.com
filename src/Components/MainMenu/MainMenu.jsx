@@ -1,11 +1,25 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../utils/CartContext";
 import "./MainMenu.css";
-import { FaUser, FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FaShoppingCart, FaSearch, FaTimes } from "react-icons/fa";
+import { SearchContext } from "../../utils/SearchContext";
 
 const MainMenu = () => {
   const { cart, addToCart, menuItems, currentMenu, handleMenuClick } =
     useContext(CartContext);
+
+  // import searchQuery from SearchContext
+  const {
+    searchQuery,
+    isSearchBarVisible,
+    handleSearchIconClick,
+    handleSearchQueryChange,
+  } = useContext(SearchContext);
+
+  // Filter items based on the search query
+  const filteredItems = menuItems[currentMenu].filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   // useState for specific food item
   const [clicked, setClicked] = useState({});
@@ -78,36 +92,61 @@ const MainMenu = () => {
           >
             Burger
           </button>
+          {isSearchBarVisible && (
+            <input
+              type="text"
+              className="search-bar"
+              value={searchQuery}
+              onChange={handleSearchQueryChange}
+              placeholder="Search..."
+            />
+          )}
+          <div className="search-icon" onClick={handleSearchIconClick}>
+            {isSearchBarVisible ? (
+              <FaTimes size={17} color="#000" />
+            ) : (
+              <FaSearch size={17} color="#000" />
+            )}
+          </div>
         </div>
       </div>
 
       <CartContext.Provider value={{ cart, addToCart, clicked, setClicked }}>
         <div className="menu-container menupage">
-          {menuItems[currentMenu].map((food, index) => (
-            <div key={index} className="main-container">
-              <div className="food-container">
-                <img src={food.image} alt={food.name} />
+          {filteredItems.length > 0 ? (
+            filteredItems.map((food, index) => (
+              <div key={index} className="main-container">
+                <div className="food-container">
+                  <img src={food.image} alt={food.name} />
+                </div>
+                <div className="text-container">
+                  <h2>{food.name}</h2>
+                  <p>{food.details}</p>
+                </div>
+                <div className="last-container">
+                  <div className="price-text">N{food.price},000</div>
+                  <button
+                    className={`cart-btn ${
+                      clicked[food.name] ? "clicked" : ""
+                    }`}
+                    onClick={() => handleButtonClick(food)}
+                  >
+                    {clicked[food.name] ? "Done" : "Add to Cart"}
+                    <FaShoppingCart
+                      size={17}
+                      color="#000"
+                      className="menu-icon"
+                    />
+                  </button>
+                </div>
               </div>
-              <div className="text-container">
-                <h2>{food.name}</h2>
-                <p>{food.details}</p>
-              </div>
-              <div className="last-container">
-                <div className="price-text">N{food.price},000</div>
-                <button
-                  className={`cart-btn ${clicked[food.name] ? "clicked" : ""}`}
-                  onClick={() => handleButtonClick(food)}
-                >
-                  {clicked[food.name] ? "Done" : "Add to Cart"}
-                  <FaShoppingCart
-                    size={17}
-                    color="#000"
-                    className="menu-icon"
-                  />
-                </button>
-              </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <h1>
+              No Result! <br />
+              Please Make a New Search.
+            </h1>
+          )}
         </div>
       </CartContext.Provider>
     </section>

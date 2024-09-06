@@ -1,6 +1,7 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useContext } from "react";
 import MenuPageData from "./MenuPageData";
 import FoodData from "./FoodData";
+import { SearchContext } from "./SearchContext";
 
 export const CartContext = createContext();
 

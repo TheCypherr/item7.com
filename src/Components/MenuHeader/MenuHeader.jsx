@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./MenuHeader.css";
 import { Link } from "react-router-dom";
 import {
@@ -51,7 +51,6 @@ const MenuHeader = () => {
                 <Link to="/cart">
                   <FaShoppingCart size={17} color="#000" className="icon" />
                 </Link>
-                <FaSearch size={17} color="#000" className="icon" />
               </div>
               <div className="order">
                 <Link to="/cart" className="cart-link">
@@ -81,7 +80,6 @@ const MenuHeader = () => {
           <Link to="/cart">
             <FaShoppingCart size={17} color="#000" className="icon" />
           </Link>
-          <FaSearch size={17} color="#000" className="icon" />
           <Link to="/cart" className="cart-link">
             <button className="btn">View Cart</button>
           </Link>
