@@ -218,6 +218,7 @@ button.menu-button {
   }
   .search-icon {
     cursor: pointer;
+    margin-right: 8px;
   }
   .menu-container {
     display: grid;
