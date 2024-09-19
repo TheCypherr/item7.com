@@ -24,6 +24,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-weight: lighter;
 }
 
 /* Style the container of the dots */
