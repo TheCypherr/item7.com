@@ -1,20 +1,37 @@
 import React, { useState } from "react";
 import "./CartHeader.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaUser,
   FaShoppingCart,
   FaSearch,
   FaBars,
   FaTimes,
+  FaSignOutAlt,
 } from "react-icons/fa";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { signOut } from "firebase/auth";
+import { useFirebaseUser } from "../../../config/FirebaseContext";
+import { auth } from "../../../config/FirebaseConfig";
 
 const CartHeader = () => {
+  // user info from google signin to use for display name here
+  const { user } = useFirebaseUser();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
+  const handleLogout = async () => {
+    try {
+      setLoading(true);
+      await signOut(auth);
+      setTimeout(() => {
+        setLoading(false);
+        navigate("/login");
+      }, 2000);
+    } catch (error) {
+      setLoading(false);
+    }
+  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -50,14 +67,15 @@ const CartHeader = () => {
             </div>
             <div className="h-three-zero">
               <div className="icon-div">
-                <FaUser size={17} color="#000" className="icon" />
+                <Link to="/profile">
+                  <FaUser size={17} color="#000" className="icon" />
+                </Link>
                 <Link to="/cart">
                   <FaShoppingCart size={17} color="#000" className="icon" />
                 </Link>
-              </div>
-              <div className="order">
-                <Link to="/cart" className="cart-link">
-                  <button className="btn">Cart Opened</button>
+                <Link className="logout" onClick={handleLogout}>
+                  <p>Logout</p>
+                  <FaSignOutAlt size={17} color="#000" className="icon" />
                 </Link>
               </div>
             </div>
@@ -79,12 +97,15 @@ const CartHeader = () => {
           </Link>
         </div>
         <div className="h-three">
-          <FaUser size={17} color="#000" className="icon" />
+          <Link to="/profile">
+            <FaUser size={17} color="#000" className="icon" />
+          </Link>
           <Link to="/cart">
             <FaShoppingCart size={17} color="#000" className="icon" />
           </Link>
-          <Link to="/cart" className="cart-link">
-            <button className="btn">Cart Opened</button>
+          <Link className="logout" onClick={handleLogout}>
+            <p>Logout</p>
+            <FaSignOutAlt size={17} color="#000" className="icon" />
           </Link>
         </div>
       </div>
