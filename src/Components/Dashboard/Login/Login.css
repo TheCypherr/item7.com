@@ -24,7 +24,8 @@ body {
   height: 100vh;
   z-index: 0;
   overflow: hidden;
-  margin-right: auto;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .login-wrapper h1 {
@@ -262,8 +263,9 @@ button.login:hover {
     max-width: 100%;
     right: 0;
     overflow: hidden;
-    margin-right: 0;
-    /* padding: 20px; */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .login-wrapper h1 {
