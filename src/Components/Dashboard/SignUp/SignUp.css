@@ -252,3 +252,29 @@ button.signup {
     font-weight: lighter;
   }
 }
+
+/* Landscape and iPad View */
+@media (min-width: 750px) and (max-width: 900px) {
+  .signup-wrapper {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    font-weight: lighter;
+  }
+
+  .signup-wrapper h1 {
+    padding-top: 20px;
+  }
+
+  .inner-signup {
+    box-shadow: 0 8px 8px #fff;
+    width: 20rem;
+    padding: 20px;
+    margin-bottom: 80px;
+    border-radius: 5px;
+  }
+
+  .marquee-container {
+    display: none;
+  }
+}

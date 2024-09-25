@@ -92,15 +92,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -108,15 +108,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -124,15 +124,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -140,15 +140,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -156,15 +156,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -172,15 +172,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -188,15 +188,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -204,15 +204,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -220,15 +220,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>
@@ -236,15 +236,15 @@ const Reviews = () => {
           <div className="review-one">
             <FaQuoteLeft />
             <h4>
-              Wiba really came through when I needed help with ACC 101. The
-              practice quizzes and materials helped me fill in the
-              <span> gaps in my understanding. </span>
+              Item7 offers delicious meals, quick service, and an easy online
+              ordering experience. Perfect for satisfying
+              <span> cravings anytime. </span>
             </h4>
 
             <div className="small-word">
               <h5>
-                Tunde <br />
-                100L Accounting student
+                Amina <br />
+                Eksu 200L Student
               </h5>
             </div>
           </div>

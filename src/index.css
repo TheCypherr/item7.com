@@ -117,6 +117,7 @@ body {
   .slick-dots {
     padding: 0px 30px 0px 30px;
     margin-top: 20px;
+    top: 130%;
   }
 
   .slick-next {
@@ -152,5 +153,19 @@ body {
   .slick-dots {
     padding-left: 20px;
     margin-top: -15px;
+  }
+
+  .slick-next {
+    position: absolute;
+    right: 5%;
+    top: 62%;
+    z-index: 1000;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: 3%;
+    top: 62%;
+    z-index: 1000;
   }
 }

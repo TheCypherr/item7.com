@@ -164,27 +164,16 @@ button.btn {
     color: #fff;
     font-weight: 600;
   }
-  .h-three {
-    align-items: center;
-    display: flex;
-    /* margin-top: -25px; */
+  .logout {
+    height: 100%;
   }
-  .icon {
-    fill: #fff;
-    margin-right: 5px;
-    cursor: pointer;
-    margin-top: 25px;
+
+  .logout p {
+    display: none;
   }
-  button.btn {
-    width: 130px;
-    height: 35px;
-    background: #ff1c1c;
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    border-radius: 50px;
-    margin-top: 25px;
-    cursor: pointer;
-    transition: all 300ms ease-in;
+
+  .logout svg {
+    display: inline-block;
+    fill: #ff1c1c;
   }
 }

@@ -300,3 +300,25 @@ button.login:hover {
     font-weight: lighter;
   }
 }
+
+/* Landscape and iPad View */
+@media (min-width: 750px) and (max-width: 900px) {
+  .login-wrapper {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    font-weight: lighter;
+  }
+
+  .loginSide-two {
+    box-shadow: 0 8px 8px #fff;
+    width: 20rem;
+    padding: 20px;
+    margin-bottom: 80px;
+    border-radius: 5px;
+  }
+
+  .marquee-container {
+    display: none;
+  }
+}

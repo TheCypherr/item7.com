@@ -79,9 +79,9 @@ body {
 }
 
 /* Landscape and iPad View */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 750px) and (max-width: 900px) {
   .review-wrapper {
-    padding: 130px 15px 100px 15px;
+    padding: 30px 15px 30px 15px;
   }
   .review-wrapper h1 {
     font-size: 1.9rem;

@@ -154,6 +154,9 @@ button.hero-btn:hover {
 }
 
 @media (min-width: 750px) and (max-width: 900px) {
+  .homeHero-wrapper {
+    padding: 50px 15px 50px 15px;
+  }
   .small {
     flex-direction: row;
   }

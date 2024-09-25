@@ -118,7 +118,7 @@ const Home = () => {
           </h1>
           <p>Order one or two make you take hold belle.</p>
           <Link to="/login">
-            <button className="btn2">Order Now</button>
+            <button className="btn2 btn-home">Order Now</button>
           </Link>
         </div>
       </div>
