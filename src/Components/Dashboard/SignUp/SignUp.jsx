@@ -18,6 +18,11 @@ const SignUp = () => {
   const { setUser } = useFirebaseUser();
   const navigate = useNavigate();
 
+  // handle page refresh onclick of logo
+  const handlePageRefresh = () => {
+    window.location.reload;
+  };
+
   // State for username/password and error message
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -137,7 +142,7 @@ const SignUp = () => {
     <section className="signup-wrapper home-back">
       <div className="login-overlay acct-overlay"></div>
       <div className="h-one">
-        <Link to="/">
+        <Link to="/" onClick={handlePageRefresh}>
           <img src="./item7go.png" alt="" />
         </Link>
       </div>

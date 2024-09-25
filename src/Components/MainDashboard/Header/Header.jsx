@@ -23,6 +23,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // Firebase logout with loadingstate and timer
   const handleLogout = async () => {
     try {
       setLoading(true);
@@ -34,6 +35,21 @@ const Header = () => {
     } catch (error) {
       setLoading(false);
     }
+  };
+
+  //Loading state for path navigations
+  const handlePathNavigation = (path) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate(path);
+    }, 2000);
+  };
+
+  // handle page refresh onclick of logo
+  const handlePageRefresh = () => {
+    window.location.reload;
   };
 
   const toggleMenu = () => {
@@ -65,7 +81,7 @@ const Header = () => {
       <div className="dark-overlay"></div>
       <div className={`inner-h ${isOpen ? "menu-open" : ""}`}>
         <div className="h-one">
-          <Link to="/main">
+          <Link to="/main" onClick={handlePageRefresh}>
             <img src="./item7go.png" alt="" />
           </Link>
         </div>
@@ -79,22 +95,31 @@ const Header = () => {
               <Link to="/main" className="custom-link">
                 HOME
               </Link>
-              <Link to="/menupage" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/menupage")}
+              >
                 MENU
               </Link>
-              <Link to="/about" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/about")}
+              >
                 ABOUT
               </Link>
-              <Link to="/book" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/book")}
+              >
                 BOOK TABLE
               </Link>
             </div>
             <div className="h-three-zero">
               <div className="icon-div">
-                <Link to="/profile">
+                <Link onClick={() => handlePathNavigation("/profile")}>
                   <FaUser size={17} color="#000" className="icon" />
                 </Link>
-                <Link to="/cart">
+                <Link onClick={() => handlePathNavigation("/cart")}>
                   <FaShoppingCart size={17} color="#000" className="icon" />
                 </Link>
                 <Link className="logout" onClick={handleLogout}>
@@ -110,13 +135,22 @@ const Header = () => {
           <Link to="/main" className="custom-link">
             HOME
           </Link>
-          <Link to="/menupage" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/menupage")}
+          >
             MENU
           </Link>
-          <Link to="/about" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/about")}
+          >
             ABOUT
           </Link>
-          <Link to="/book" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/book")}
+          >
             BOOK TABLE
           </Link>
         </div>
@@ -124,7 +158,7 @@ const Header = () => {
           <Link to="/profile">
             <FaUser size={17} color="#000" className="icon" />
           </Link>
-          <Link to="/cart">
+          <Link onClick={() => handlePathNavigation("/cart")}>
             <FaShoppingCart size={17} color="#000" className="icon" />
           </Link>
           <Link className="logout" onClick={handleLogout}>
@@ -148,7 +182,7 @@ const Header = () => {
               There's a viriety of hot meals available for you to add to cart
               and checkout. Our riders are on standby!
             </p>
-            <Link to="/menupage">
+            <Link onClick={() => handlePathNavigation("/menupage")}>
               <button className="btn2">Order Now</button>
             </Link>
           </div>
@@ -161,7 +195,7 @@ const Header = () => {
               Worry less! There's a whole lot of different soft drinks, wine and
               even youghurt to pair with your meal.
             </p>
-            <Link to="/menupage">
+            <Link onClick={() => handlePathNavigation("/menupage")}>
               <button className="btn2">Order Now</button>
             </Link>
           </div>
@@ -175,7 +209,7 @@ const Header = () => {
               favorite combo to cart and use the promo-code to get a 20%
               discount.
             </p>
-            <Link to="/menupage">
+            <Link onClick={() => handlePathNavigation("/menupage")}>
               <button className="btn2">Order Now</button>
             </Link>
           </div>

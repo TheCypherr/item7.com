@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomeHero.css";
-import { FaUser, FaShoppingCart, FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 const HomeHero = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      navigate("/login");
+    }, 2000);
+  };
+
   return (
     <section className="homeHero-wrapper">
       <div className="small-hero">
@@ -14,8 +25,8 @@ const HomeHero = () => {
             <h2>
               20%<span> off</span>
             </h2>
-            <Link to="/login">
-              <button className="hero-btn">
+            <Link>
+              <button className="hero-btn" onClick={handleLogin}>
                 Order Now
                 <FaShoppingCart size={17} color="#000" className="hero-icon" />
               </button>
@@ -30,8 +41,8 @@ const HomeHero = () => {
             <h2>
               15%<span> off</span>
             </h2>
-            <Link to="/login">
-              <button className="hero-btn">
+            <Link>
+              <button className="hero-btn" onClick={handleLogin}>
                 Order Now
                 <FaShoppingCart size={17} color="#000" className="hero-icon" />
               </button>
@@ -39,6 +50,12 @@ const HomeHero = () => {
           </div>
         </div>
       </div>
+
+      {loading && (
+        <div className="load-slide">
+          <div className="load-bar"></div>
+        </div>
+      )}
     </section>
   );
 };

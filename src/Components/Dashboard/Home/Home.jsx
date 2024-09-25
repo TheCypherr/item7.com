@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaUser, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import { useScroll } from "../../../utils/ScrollContext";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
   // scrollToSection
   const { scrollToSection } = useScroll();
 
@@ -29,12 +32,27 @@ const Home = () => {
     scrollToSection(sectionKey);
   };
 
+  // handle loading state and navigation for login
+  const handleLogin = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/login");
+    }, 2000);
+  };
+
+  // handles page refresh onclick of logo
+  const handlePageRefresh = () => {
+    window.location.reload()
+  }
+
   return (
     <section className="header-wrapper home-back">
       <div className="dark-overlay"></div>
       <div className={`inner-h ${isOpen ? "menu-open" : ""}`}>
         <div className="h-one">
-          <Link to="/">
+          <Link to="/" onClick={handlePageRefresh}>
             <img src="./item7go.png" alt="" />
           </Link>
         </div>
@@ -94,18 +112,20 @@ const Home = () => {
           </Link>
         </div>
         <div className="h-three new-adjust">
-          <Link to="/login">
+          <Link onClick={handleLogin}>
             <FaUser size={17} color="#000" className="icon icon-adjust" />
           </Link>
-          <Link to="/login">
+          <Link onClick={handleLogin}>
             <FaShoppingCart
               size={17}
               color="#000"
               className="icon icon-adjust"
             />
           </Link>
-          <Link to="/login" className="cart-link">
-            <button className="btn">Order Now</button>
+          <Link className="cart-link">
+            <button className="btn" onClick={handleLogin}>
+              Order Now
+            </button>
           </Link>
         </div>
       </div>
@@ -117,8 +137,10 @@ const Home = () => {
             Awfa my guy! <br /> You don chop?
           </h1>
           <p>Order one or two make you take hold belle.</p>
-          <Link to="/login">
-            <button className="btn2 btn-home">Order Now</button>
+          <Link>
+            <button className="btn2 btn-home" onClick={handleLogin}>
+              Order Now
+            </button>
           </Link>
         </div>
       </div>
@@ -128,6 +150,12 @@ const Home = () => {
           Utmost Priority.
         </Marquee>
       </div>
+
+      {loading && (
+        <div className="load-slide">
+          <div className="load-bar"></div>
+        </div>
+      )}
     </section>
   );
 };

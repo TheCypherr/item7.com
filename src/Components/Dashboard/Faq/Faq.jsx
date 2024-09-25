@@ -1,16 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Faq.css";
 import { FaRibbon, FaShoppingBag, FaUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useScroll } from "../../../utils/ScrollContext";
 
 const Faq = () => {
   const targetRef = useRef(null);
   const { registerRef } = useScroll();
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     registerRef("faqScroll", targetRef.current);
   }, [registerRef]);
+
+  const handleLogin = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      navigate("/login");
+    }, 2000);
+  };
 
   return (
     <section className="faq-wrapper" ref={targetRef}>
@@ -34,12 +44,12 @@ const Faq = () => {
           <div className="two-top">
             <h1>Place your order and have it delivered in few minutes!</h1>
             <div className="icon-links">
-              <Link to="/login">
+              <Link onClick={handleLogin}>
                 <div className="svg-icon">
                   <FaUser size={30} />
                 </div>
               </Link>
-              <Link to="/login">
+              <Link onClick={handleLogin}>
                 <div className="svg-icon">
                   <FaShoppingBag size={30} />
                 </div>
@@ -50,12 +60,20 @@ const Faq = () => {
             <p>
               Get <span> 20% off </span>your next order when you refer a friend.
             </p>
-            <Link to="/login">
-              <button className="faq-btn">Login Now</button>
+            <Link>
+              <button className="faq-btn" onClick={handleLogin}>
+                Login Now
+              </button>
             </Link>
           </div>
         </div>
       </div>
+
+      {loading && (
+        <div className="load-slide">
+          <div className="load-bar"></div>
+        </div>
+      )}
     </section>
   );
 };

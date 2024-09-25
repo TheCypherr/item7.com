@@ -11,6 +11,11 @@ const Login = () => {
   // use the imported firebaseContext here in signup
   const { setUser } = useFirebaseUser();
 
+  // handle page refresh onclick of logo
+  const handlePageRefresh = () => {
+    window.location.reload;
+  };
+
   const navigate = useNavigate();
 
   // State for login error messages
@@ -107,7 +112,7 @@ const Login = () => {
     <section className="login-wrapper home-back">
       <div className="login-overlay acct-overlay"></div>
       <div className="h-one">
-        <Link to="/">
+        <Link to="/" onClick={handlePageRefresh}>
           <img src="./item7go.png" alt="" />
         </Link>
       </div>

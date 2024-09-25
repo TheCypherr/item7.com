@@ -33,6 +33,21 @@ const MenuHeader = () => {
     }
   };
 
+  //Loading state for path navigations
+  const handlePathNavigation = (path) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate(path);
+    }, 2000);
+  };
+
+  // handle page refresh onclick of logo
+  const handlePageRefresh = () => {
+    window.location.reload;
+  };
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -41,7 +56,7 @@ const MenuHeader = () => {
     <section className="menuHeader-wrapper back">
       <div className={`inner-h ${isOpen ? "menu-open" : ""}`}>
         <div className="h-one">
-          <Link to="/main">
+          <Link to="/main" onClick={handlePageRefresh}>
             <img src="./item7go.png" alt="" />
           </Link>
         </div>
@@ -53,16 +68,28 @@ const MenuHeader = () => {
         {isOpen && (
           <div className="h-two-menu">
             <div className="h-two-zero2">
-              <Link to="/main" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/main")}
+              >
                 HOME
               </Link>
-              <Link to="/menupage" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/menupage")}
+              >
                 MENU
               </Link>
-              <Link to="/about" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/about")}
+              >
                 ABOUT
               </Link>
-              <Link to="/book" className="custom-link">
+              <Link
+                className="custom-link"
+                onClick={() => handlePathNavigation("/book")}
+              >
                 BOOK TABLE
               </Link>
             </div>
@@ -71,7 +98,7 @@ const MenuHeader = () => {
                 <Link to="/profile">
                   <FaUser size={17} color="#000" className="icon" />
                 </Link>
-                <Link to="/cart">
+                <Link onClick={() => handlePathNavigation("/cart")}>
                   <FaShoppingCart size={17} color="#000" className="icon" />
                 </Link>
                 <Link className="logout" onClick={handleLogout}>
@@ -84,16 +111,28 @@ const MenuHeader = () => {
         )}
 
         <div className="h-menu">
-          <Link to="/main" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/main")}
+          >
             HOME
           </Link>
-          <Link to="/menupage" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/menupage")}
+          >
             MENU
           </Link>
-          <Link to="/about" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/about")}
+          >
             ABOUT
           </Link>
-          <Link to="/book" className="custom-link">
+          <Link
+            className="custom-link"
+            onClick={() => handlePathNavigation("/book")}
+          >
             BOOK TABLE
           </Link>
         </div>

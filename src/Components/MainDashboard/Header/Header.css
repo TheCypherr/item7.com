@@ -125,6 +125,7 @@ button.btn:hover {
   color: #fff;
 }
 h1.user-display {
+  position: relative;
   text-align: right;
   margin-top: 30px;
   margin-bottom: 10px;

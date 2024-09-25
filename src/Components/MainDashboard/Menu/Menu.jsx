@@ -3,7 +3,7 @@ import { CartContext } from "../../../utils/CartContext";
 import "./Menu.css";
 import foodList from "../../../utils/FoodData";
 import { FaShoppingCart, FaSearch, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../../utils/SearchContext";
 
 const Menu = () => {
@@ -14,6 +14,20 @@ const Menu = () => {
     homeCurrentMenu,
     handleHomeMenuClick,
   } = useContext(CartContext);
+
+  const navigate = useNavigate();
+  // state for loading
+  const [loading, setLoading] = useState(false);
+
+  // click function for handling loading state
+  const handlePathNavigation = (path) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate(path);
+    }, 2000);
+  };
 
   // useState for specific food item
   const [clicked, setClicked] = useState({});
@@ -133,10 +147,21 @@ const Menu = () => {
             </h1>
           )}
         </div>
-        <Link to="/menupage">
-          <button className="menu-button">View More</button>
+        <Link>
+          <button
+            className="menu-button"
+            onClick={() => handlePathNavigation("/menupage")}
+          >
+            View More
+          </button>
         </Link>
       </CartContext.Provider>
+
+      {loading && (
+        <div className="load-slide">
+          <div className="load-bar"></div>
+        </div>
+      )}
     </section>
   );
 };
