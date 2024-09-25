@@ -1,0 +1,276 @@
+body {
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  padding: 0px;
+  margin: 0;
+  /* padding: 0px 80px; */
+}
+
+.login-wrapper {
+  color: #fff;
+  height: 100vh;
+  padding: 30px 110px 10px 110px;
+  /* margin-bottom: 60px; */
+  font-weight: lighter;
+}
+
+.login-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.login-wrapper h1 {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 15px;
+  margin-top: 50px;
+}
+
+.inner-login {
+  /* height: 100vh; */
+  position: relative;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginSide-two {
+  box-shadow: 0 8px 8px #fff;
+  width: 20rem;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: lighter;
+}
+
+.input-section1 {
+  padding: 10px;
+}
+.input-section1 input {
+  position: relative;
+  padding-left: 10px;
+  width: 300px;
+  height: 35px;
+  border: none;
+  background-color: #dad8d8;
+  font-weight: lighter;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.input-section1 input::placeholder {
+  color: #222831;
+  font-size: 0.8rem;
+}
+
+.input-section2 {
+  padding: 10px;
+}
+.input-section2 input {
+  position: relative;
+  padding-left: 10px;
+  width: 300px;
+  height: 35px;
+  border: none;
+  background-color: #dad8d8;
+  font-weight: lighter;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.input-section2 input::placeholder {
+  color: #222831;
+  font-size: 0.8rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+span.show-password {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+span.show-password svg {
+  fill: #222831;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+p.error-message {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+.in {
+  display: flex;
+  justify-content: space-between;
+}
+
+.in p {
+  padding-left: 2px;
+  margin-top: -25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.in p:hover {
+  text-decoration: underline;
+}
+
+button.login {
+  align-self: flex-start;
+  padding: 8px;
+  width: 80px;
+  border: none;
+  background-color: #ff1c1c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: lighter;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+  margin-left: 3px;
+  border-radius: 5px;
+}
+button.login:hover {
+  transform: scaleY(1.1);
+}
+
+.dont-have {
+  margin-top: -10px;
+}
+
+.login-or {
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+.login-or p {
+  font-weight: lighter;
+}
+
+.signin {
+  margin-bottom: 40px;
+}
+
+.dont-have p {
+  font-size: 0.9rem;
+}
+.signup-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.signup-link:hover {
+  text-decoration: underline;
+}
+.signup-link0 {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.signup-link0:hover {
+  text-decoration: underline;
+}
+
+/* Success popup after successful login */
+
+.success-popup {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+  background-color: #27d75c;
+  font-weight: lighter;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 10pc rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+.login-marquee {
+  width: 100vw;
+  padding: 10px;
+  background-color: #ffffffd7;
+  margin-top: 70px;
+  color: #222831;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+/* Portrait View Responsiveness */
+@media (max-width: 600px) {
+  .login-marquee {
+    max-width: 100vw;
+    padding: 10px;
+    background-color: #ffffffd7;
+    margin-top: 100px;
+    color: #222831;
+    font-size: 1.2rem;
+    overflow: hidden;
+  }
+
+  .login-wrapper {
+    padding: 30px 20px 10px 20px;
+    height: 100vh;
+  }
+
+  .login-overlay {
+    max-height: 100%;
+    padding: 20px;
+  }
+
+  .login-wrapper h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 18px;
+    margin-top: 80px;
+  }
+  .success-popup {
+    top: 10%;
+    left: 20%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: lighter;
+  }
+}

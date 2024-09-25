@@ -55,10 +55,90 @@ body {
   color: #fff; /* Change color on hover */
 }
 
+/* Style the previous arrow (left) */
+.slick-prev {
+  position: absolute;
+  left: -7%;
+  top: 45%;
+  z-index: 1000;
+}
+
+/* Style the next arrow (right) */
+.slick-next {
+  position: absolute;
+  right: -5%;
+  top: 45%;
+  z-index: 1000;
+}
+
+/* Adjust vertical alignment */
+.slick-prev,
+.slick-next {
+  /* top: 50%; Center vertically */
+  transform: translateY(-50%);
+}
+
+/* Adjust size and appearance of arrows */
+.slick-prev::before,
+.slick-next::before {
+  width: 100vw;
+  font-size: 40px;
+  color: var(#fff);
+  border-radius: 50%;
+  background-color: #222831;
+}
+
+/* Loading Bar */
+.load-slide {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.load-bar {
+  height: 100%;
+  background-color: #ff1c1c;
+  width: 0%;
+  animation: load-bar 2s ease-out forwards;
+}
+
+@keyframes load-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .slick-dots {
     padding: 0px 30px 0px 30px;
     margin-top: 20px;
+  }
+
+  .slick-next {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    z-index: 1000;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: -1%;
+    top: 50%;
+    z-index: 1000;
+  }
+
+  .load-slide {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
