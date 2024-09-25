@@ -152,7 +152,7 @@ button.faq-btn:hover {
 
 @media (min-width: 750px) and (max-width: 900px) {
   .faq-wrapper {
-    padding: 20px 15px 10px 15px;
+    padding: 50px 15px 10px 15px;
     height: 100vh;
   }
 
