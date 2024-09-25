@@ -7,6 +7,7 @@ body {
 }
 
 .login-wrapper {
+  position: relative;
   color: #fff;
   height: 100vh;
   padding: 30px 110px 10px 110px;
@@ -21,7 +22,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 0;
   overflow: hidden;
   margin: 0;
@@ -231,6 +232,17 @@ button.login:hover {
   animation: slideIn 0.3s ease-out;
 }
 
+.marquee-container {
+  position: absolute;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 .login-marquee {
   width: 100%;
   padding: 10px;
@@ -238,19 +250,28 @@ button.login:hover {
   margin-top: 70px;
   color: #222831;
   font-size: 1.2rem;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
 /* Portrait View Responsiveness */
 @media (max-width: 600px) {
+  .marquee-container {
+    width: 100vw;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
   .login-marquee {
-    max-width: 100%;
     padding: 10px;
-    background-color: #ffffffd7;
     margin-top: 100px;
+    background-color: #ffffffd7;
     color: #222831;
     font-size: 1.2rem;
-    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .login-wrapper {
@@ -259,13 +280,10 @@ button.login:hover {
   }
 
   .login-overlay {
-    max-height: 100vh;
-    max-width: 100%;
-    right: 0;
-    overflow: hidden;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
     margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
   }
 
   .login-wrapper h1 {
