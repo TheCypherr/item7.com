@@ -257,6 +257,7 @@ button.login:hover {
 
   .login-overlay {
     max-height: 100%;
+    overflow: hidden;
     padding: 20px;
   }
 
