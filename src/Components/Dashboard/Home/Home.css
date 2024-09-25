@@ -58,7 +58,7 @@
 .marquee-container {
   position: absolute;
   left: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .marquee {
