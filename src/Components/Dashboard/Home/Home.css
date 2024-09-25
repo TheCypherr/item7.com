@@ -76,19 +76,19 @@
     width: 100%;
     padding: 10px;
     background-color: #ffffffd7;
-    margin-top: 150px;
+    margin-top: 130px;
     color: #222831;
     font-size: 1.2rem;
   }
 
   .dark-overlay {
     max-height: 100vh;
-    overflow: hidden;
-    padding: 20px;
+    /* overflow: hidden; */
+    /* padding: 20px; */
   }
 
   .home {
-    margin-top: 70px;
+    margin-top: 90px;
     color: #fff;
     transition: transform 0.5s ease-in-out;
   }
