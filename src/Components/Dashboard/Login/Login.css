@@ -48,7 +48,7 @@ body {
 }
 
 .loginSide-two {
-  box-shadow: 0 8px 8px #fff;
+  box-shadow: 0 3px 3px #fff;
   width: 20rem;
   padding: 20px;
   border-radius: 5px;
@@ -311,7 +311,7 @@ button.login:hover {
   }
 
   .loginSide-two {
-    box-shadow: 0 8px 8px #fff;
+    box-shadow: 0 3px 3px #fff;
     width: 20rem;
     padding: 20px;
     margin-bottom: 80px;

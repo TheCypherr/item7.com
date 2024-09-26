@@ -17,9 +17,9 @@ const MainMenu = () => {
   } = useContext(SearchContext);
 
   // Filter items based on the search query
-  const filteredItems = menuItems[currentMenu].filter((item) =>
-    item.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // const filteredItems = menuItems[currentMenu].filter((item) =>
+  //   item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   // useState for specific food item
   const [clicked, setClicked] = useState({});
@@ -92,7 +92,7 @@ const MainMenu = () => {
           >
             Burger
           </button>
-          {isSearchBarVisible && (
+          {/* {isSearchBarVisible && (
             <input
               type="text"
               className="search-bar"
@@ -100,21 +100,21 @@ const MainMenu = () => {
               onChange={handleSearchQueryChange}
               placeholder="Search..."
             />
-          )}
-          <div className="search-icon" onClick={handleSearchIconClick}>
+          )} */}
+          {/* <div className="search-icon" onClick={handleSearchIconClick}>
             {isSearchBarVisible ? (
               <FaTimes size={17} color="#000" />
             ) : (
               <FaSearch size={17} color="#000" />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
       <CartContext.Provider value={{ cart, addToCart, clicked, setClicked }}>
         <div className="menu-container menupage">
-          {filteredItems.length > 0 ? (
-            filteredItems.map((food, index) => (
+          {menuItems[currentMenu].length > 0 ? (
+            menuItems[currentMenu].map((food, index) => (
               <div key={index} className="main-container">
                 <div className="food-container">
                   <img src={food.image} alt={food.name} />
